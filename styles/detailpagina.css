@@ -8,7 +8,7 @@
     src: url("/assets/MartianMono-VariableFont_wdth,wght.ttf");
 }
 
-:root {
+body {
     --zwart: #222226;
     --grijs: #666666;
     --wit: #FFFFFF;
