@@ -379,6 +379,9 @@ section.eventlist {
         text-transform: uppercase;
         color: var(--blue);
     }
+    img {
+        height: 1rem;
+    }
 }
 
 section.verleden {
@@ -471,15 +474,15 @@ section.thanks {
 
 }
 
-.logos {
+div.logos {
     border-top: var(--border);
     display: flex;
-    overflow-x: auto;
+    overflow-x: scroll;
     overscroll-behavior-x: contain;
     height: 150px;
-
     img {
         border-right: var(--border);
+        padding: 2rem;
     }
 
 }
