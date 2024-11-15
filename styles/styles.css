@@ -325,6 +325,10 @@ section.search {
     @media (width > 48rem) {
         padding: 3rem;
     }
+    .right-container {
+        display: flex;
+        gap:var(--size-sm);
+    }
 }
 
 section.eventlist {
