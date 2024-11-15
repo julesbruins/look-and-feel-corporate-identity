@@ -615,6 +615,10 @@ section.bottom {
 
     a {
         font-size: var(--size-sm);
+        color: var(--black);
+    }
+    a.blauwe-link {
+        color: var(--blue);
     }
     img {
         height: var(--size-sm);
