@@ -134,7 +134,8 @@ h4,
     align-items: center;
     background-color: var(--white);
     font-family: var(--secondary-font);
-    width: fit-content;
+    width: fit-content; 
+/* zorgt dat border niet plakt in uitklap nav */
     
     span {
         padding: .75rem;
@@ -278,7 +279,7 @@ section.trending {
 
     }
 
-    @media (width > 66rem) {
+    @media (width > 68rem) {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
 
@@ -610,10 +611,17 @@ section.bottom {
     justify-content: center;
     text-align: left;
     padding-left: 1.5rem;
-    font-size: 3rem;
     transition: .3s ease;
     opacity: 100%;
-
+    
+    li {
+        margin-top: 2.5rem;
+    }
+    .align-right {
+        border-top: var(--border);
+        width: 25rem;
+        padding-top: 3rem
+    }
     a {
         font-size: var(--size-sm);
         color: var(--black);
@@ -625,7 +633,7 @@ section.bottom {
         height: var(--size-sm);
     }
 
-    @media (width > 66rem) {
+    @media (width > 68rem) {
         position: relative;
         max-width: 100%;
         height: fit-content;
@@ -636,9 +644,14 @@ section.bottom {
             gap: var(--size-sm);
             align-items: flex-end;
         }
-
+        li {
+            margin-top: 0;
+        }
         .align-right {
-            margin-left: auto;
+            margin-left: auto;      /* zorgt voor ruimte in nav */
+            border-top: none;
+            padding-top: 0;
+            width: fit-content;
         }
         a {
             color: var(--black);
@@ -669,7 +682,7 @@ nav {
         border-bottom: 0px;
     }
 
-    @media (width > 66rem) {
+    @media (width > 68rem) {
         font-size: 1.5rem;
         border-bottom: none;
         padding: var(--size-lg);
@@ -708,7 +721,7 @@ body:has(header .active) {
     width: 2.5rem;
     background-color: var(--white);
 
-    @media (width > 66rem) {
+    @media (width > 68rem) {
         display: none;
     }
 }
