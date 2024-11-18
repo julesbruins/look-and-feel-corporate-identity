@@ -135,6 +135,7 @@ h4,
     background-color: var(--white);
     font-family: var(--secondary-font);
     width: fit-content; 
+    color: var(--black);
 /* zorgt dat border niet plakt in uitklap nav */
     
     span {
