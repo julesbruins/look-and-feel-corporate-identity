@@ -632,16 +632,13 @@ section.bottom {
 
         ul {
             display: flex;
-            flex-direction: row;
             gap: var(--size-sm);
+            align-items: flex-end;
         }
 
-        /* .right-container {
+        .align-right {
             margin-left: auto;
-            display: flex;
-            gap: var(--size-sm);
-        } */
-
+        }
         a {
             color: var(--black);
         }
