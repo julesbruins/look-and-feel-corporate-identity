@@ -14,54 +14,47 @@ body {
 
 .styling-form {
     font-family: "archivo";
-
-   
-
+    
     label {
         display:grid;
     }
 
     label span {
         padding:.5em;
+        color: grey;
         pointer-events:none;
-
         grid-area: 1/1;
-
-        transition: .2s;
-
-        z-index: 1;
+        transition: .2s;                            /* snelheid naar boven verplaatsen */
+        z-index: 1;                                 /* zorgt dat de tekst geen waas krijgt omdat het achter background color staat */
     }
  
-    label:has([required]) span::after {
+    label:has([required]) span::after {             /* voegt verplicht teken toe als 'required' veld is */
         content:"*";
-        color:red;
     }
+    
 
     label:has(:focus) span,
     label:not( :has(:placeholder-shown) ) span {
-        translate: 0 -1.2em;
+        translate: 0 -1.2em;                        /* naar boven maar ook verplaatsen tekst */
+        color: blue;
     }
 
 
     input {
         grid-area: 1/1;
-
-        font:inherit;
-
-        border: 0px;
+        font:inherit;                               /* font evengroot als invulvaktekst */
+        border: 0px;                                /* geen lijn om invulvak */
         border-bottom: 1px solid black;
         background-color: #fff8;
         width: 260px;
 
+        padding: .5em;  
+        outline:none;                               /* geen lijn om invulvak wanneer geselcteerd */
 
-        padding: .5em;
-
-        outline:none;
-
-        &:focus {
+        /* &:focus {
             border-style:dashed;
             border-color:red;
-        }
+        } */
         
     }
 

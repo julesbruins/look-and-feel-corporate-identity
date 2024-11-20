@@ -160,12 +160,15 @@ section.tabellen {
     padding: var(--size-lg) var(--size-sm) 0;
     
     h3 {
-        padding-bottom: var(--size-sm);
+        padding-bottom: var(--size-md);
     }
+
+    /* TABLE STYLING */
     table {
         border: var(--border);
         padding: var(--size-sm);
         width: 100%;
+        margin-bottom: var(--size-lg);
         /* border-collapse: collapse;       zorgt voor geen ruimte tussen de tr */
     }
     td {
@@ -180,10 +183,49 @@ section.tabellen {
         margin-bottom: var(--size-sm);
     }
 
+    /* FORMS STYLING */
+    .styling-form {
+        font-family: "archivo";
+        
+        label {
+            display:grid;
+        }
+        label span {
+            padding:.5em;
+            color: var(--grey);
+            pointer-events:none;
+            grid-area: 1/1;
+            transition: .2s;                            /* snelheid naar boven verplaatsen */
+            z-index: 1;                                 /* zorgt dat de tekst geen waas krijgt omdat het achter background color staat */
+        }
+        label:has([required]) span::after {             /* voegt verplicht teken toe als 'required' veld is */
+            content:"*";
+        }
+        label:has(:focus) span,
+        label:not( :has(:placeholder-shown) ) span {
+            translate: 0 -1.2em;                        /* naar boven maar ook verplaatsen tekst  */
+            color:var(--blue);
+        }
+        input {
+            grid-area: 1/1;
+            font:inherit;                               /* font evengroot als invulvaktekst */
+            border: 0px;                                /* geen lijn om invulvak */
+            border-bottom: 1px solid black;
+            background-color: #fff8;
+            width: 100%;
+    
+            padding-bottom: .2em;  
+            outline:none;                               /* geen lijn om invulvak wanneer geselcteerd */
+            margin: 1rem 0 1rem;
+        }
     .table2 {
         padding-top: var(--size-md);
     }
 
+    a {
+        margin-top: var(--size-lg);
+    }
+}
     a {
         margin-top: var(--size-lg);
     }
@@ -218,6 +260,9 @@ section.locatie {
         height: 5rem;
         margin-right: auto;
     }
+    a.blauwe-link {
+        margin-top: 2.5rem;
+    }
 }
 
 .second {
@@ -249,7 +294,7 @@ section.locatie {
 }
 
 footer {
-    @media (width > 30rem) {
+    @media (width > 36rem) {
         border-top: var(--border);
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;

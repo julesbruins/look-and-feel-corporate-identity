@@ -506,6 +506,9 @@ div.logos {
         height: 5rem;
         margin-right: auto;
     }
+    a.blauwe-link {
+        margin-top: 2.5rem;
+    }
 }
 
 .second {
@@ -537,7 +540,7 @@ div.logos {
 }
 
 footer {
-    @media (width > 30rem) {
+    @media (width > 36rem) {
         border-top: var(--border);
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
