@@ -1,0 +1,70 @@
+@font-face {
+    font-family: "archivo";
+    src: url("/assets/Archivo-VariableFont_wdth,wght.ttf");
+}
+@font-face {
+    font-family: "martianmono";
+    src: url("/assets/MartianMono-VariableFont_wdth,wght.ttf");
+}
+
+body {
+    display:grid;
+    gap:1.5em;
+}
+
+.styling-form {
+    font-family: "archivo";
+
+   
+
+    label {
+        display:grid;
+    }
+
+    label span {
+        padding:.5em;
+        pointer-events:none;
+
+        grid-area: 1/1;
+
+        transition: .2s;
+
+        z-index: 1;
+    }
+ 
+    label:has([required]) span::after {
+        content:"*";
+        color:red;
+    }
+
+    label:has(:focus) span,
+    label:not( :has(:placeholder-shown) ) span {
+        translate: 0 -1.2em;
+    }
+
+
+    input {
+        grid-area: 1/1;
+
+        font:inherit;
+
+        border: 0px;
+        border-bottom: 1px solid black;
+        background-color: #fff8;
+        width: 260px;
+
+
+        padding: .5em;
+
+        outline:none;
+
+        &:focus {
+            border-style:dashed;
+            border-color:red;
+        }
+        
+    }
+
+   
+}
+  

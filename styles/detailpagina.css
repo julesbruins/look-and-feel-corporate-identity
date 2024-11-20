@@ -7,30 +7,6 @@
     src: url("/assets/MartianMono-VariableFont_wdth,wght.ttf");
 }
 
-/* ROOT */
-body {
-    --primary-font: "Archivo", verdana;
-    --secondary-font: "Martian Mono", sans-serif;
-    --letter-spacing: -0.04em;
-
-    --white: #ffffff;
-    --black: #000000;
-    --grey: #666666;
-    --blue: #364bf7;
-
-    --size-xs: 0.5rem;
-    --size-sm: 1rem;
-    --size-md: 2rem;
-    --size-lg: 3rem;
-    --size-xl: 4rem;
-    --size-xxl: 6rem;
-
-    --border: 1px solid black;
-
-    background: var(--white);
-    font-family: var(--primary-font);
-}
-
 /* CSS RESET */
 * {
     margin: 0;
@@ -46,14 +22,7 @@ body {
     }
 }
 
-/* FONTS STANDAARD */
-p,
-.sm {
-  font-size: clamp(var(--size-sm), 2.5vw, 1.125rem);
-  font-weight: 400; /* stays regular */
-  letter-spacing: 0;
-  line-height: clamp(1.5rem, 2.5vw, var(--size-md));
-}
+/* FONTS */
 p.label {
     font-weight: light;
     border: var(--border);
@@ -83,39 +52,6 @@ a.blauwe-link {
     color: var(--blue);
 }
 
-h1,
-.xxxl {
-  font-size: clamp(var(--size-xl), 6vw, var(--size-xxl));
-  font-weight: 600; /* stays semibold */
-  letter-spacing: var(--letter-spacing);
-  line-height: clamp(1em, 5vw, var(--size-xxl));
-  text-transform: uppercase;
-}
-h2,
-.xxl {
-  font-size: clamp(var(--size-md), 5vw, var(--size-xl));
-  font-weight: 600; /* stays semibold */
-  letter-spacing: var(--letter-spacing);
-  line-height: 3rem;
-  text-transform: uppercase;
-  hyphens: auto;
-}
-h3,
-.xl {
-  font-size: clamp(var(--size-md), 4vw, 3rem);
-  font-weight: 600; /* regular on sm | semiBold on md+ */
-  letter-spacing: var(--letter-spacing);
-  line-height: clamp(1.5rem, 3.5vw, 1em);
-  text-transform: uppercase;
-}
-h4,
-.lg {
-  font-size: clamp(1.5rem, 3.5vw, var(--size-md));
-  font-weight: 400; /* stays regular */
-  letter-spacing: 0;
-  line-height: clamp(var(--size-md), 3vw, 2.5rem);
-  text-transform: none;
-}
 .visually-hidden {
     display: none;
 }
@@ -223,11 +159,30 @@ section.info {
 section.tabellen {
     padding: var(--size-lg) var(--size-sm) 0;
     
+    h3 {
+        padding-bottom: var(--size-sm);
+    }
+    table {
+        border: var(--border);
+        padding: var(--size-sm);
+        width: 100%;
+        /* border-collapse: collapse;       zorgt voor geen ruimte tussen de tr */
+    }
+    td {
+        padding-top: var(--size-sm);
+        padding-bottom: var(--size-sm);
+        border-collapse: collapse;
+    }
+    tr + tr td {                        /*  elke opeenvolgende tr behalve eerst want die volgt niet op */
+       border-top: var(--border);
+    }
+    tr:last-child {
+        margin-bottom: var(--size-sm);
+    }
+
     .table2 {
         padding-top: var(--size-md);
     }
-
-    /* FORM STYLING */
 
     a {
         margin-top: var(--size-lg);
@@ -238,6 +193,8 @@ section.locatie {
     padding: var(--size-xl) var(--size-sm) var(--size-xxl);
     margin: auto;
     text-align: center;
+    display: grid;
+    justify-content: center;
 
     img.height {
         border: var(--border);

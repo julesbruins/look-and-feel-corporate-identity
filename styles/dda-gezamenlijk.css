@@ -19,6 +19,8 @@ body {
   --size-xl: 4rem;
   --size-xxl: 6rem;
 
+  --border: 1px solid black;
+  
   /* default */
   background: var(--white);
   font-family: var(--primary-font);
@@ -37,10 +39,14 @@ html {
   min-height: 100vh;
 }
 
+img {
+  max-width:100%;
+}
+
 /* Typografie */
 h1,
 .xxxl {
-  font-size: clamp(var(--size-lg), 6vw, var(--size-xxl));
+  font-size: clamp(2.5rem, 6vw, var(--size-xxl));
   font-weight: 600; /* stays semibold */
   letter-spacing: var(--letter-spacing);
   line-height: clamp(1em, 5vw, var(--size-xxl));
