@@ -240,6 +240,7 @@ section.tabellen {
 }
     a {
         margin-top: var(--size-lg);
+        margin-bottom: var(--size-xl);
     }
 
 
@@ -254,7 +255,7 @@ section.tabellen {
 }
 
 section.locatie {
-    padding: var(--size-xl) var(--size-sm) var(--size-xxl);
+    padding: 0;
     margin: auto;
     text-align: center;
     display: grid;
@@ -280,13 +281,18 @@ section.locatie {
     @media (width > 48rem) {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        border-top: var(--border);
 
-        img {
+        img.height {
             grid-column: 1;
+            margin-bottom: 0;
+            border: none;
         }
         .flex-container {
             padding: var(--size-lg);
         }
+
+
     }
 }
 
