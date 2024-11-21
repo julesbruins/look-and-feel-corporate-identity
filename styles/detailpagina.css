@@ -154,6 +154,18 @@ section.info {
         font-size: 1.5rem;
         font-weight: 400;
     }
+
+    @media (width > 48rem) {
+        display: grid;
+        grid-template-columns: 2fr 3.5fr;
+
+        p.groot {
+            padding-top: 0;
+        }
+        p.klein {
+            grid-column: 2;
+        }
+    }
 }
 
 section.tabellen {
@@ -229,6 +241,16 @@ section.tabellen {
     a {
         margin-top: var(--size-lg);
     }
+
+
+    @media (width > 48rem) {
+        display: grid;
+        grid-template-columns: 2fr 3.5fr;
+
+        * {
+            grid-column: 2;
+        }
+    }
 }
 
 section.locatie {
@@ -238,6 +260,14 @@ section.locatie {
     display: grid;
     justify-content: center;
 
+    .flex-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: var(--size-sm);
+    }
+
     img.height {
         border: var(--border);
         margin-bottom: var(--size-sm);
@@ -245,6 +275,18 @@ section.locatie {
     h4.xl {
         padding-top: var(--size-md);
         padding-bottom: var(--size-md);
+    }
+
+    @media (width > 48rem) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        img {
+            grid-column: 1;
+        }
+        .flex-container {
+            padding: var(--size-lg);
+        }
     }
 }
 
