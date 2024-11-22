@@ -247,10 +247,16 @@ section.tabellen {
     @media (width > 48rem) {
         display: grid;
         grid-template-columns: 2fr 3.5fr;
+        padding-top: var(--size-xl);
+
+        table {
+            margin-bottom: var(--size-xl);
+        }
 
         * {
             grid-column: 2;
         }
+
     }
 }
 
@@ -291,8 +297,6 @@ section.locatie {
         .flex-container {
             padding: var(--size-lg);
         }
-
-
     }
 }
 
