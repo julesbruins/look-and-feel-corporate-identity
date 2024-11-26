@@ -123,6 +123,7 @@ section.top {
 
     img.height {
         margin-top: var(--size-lg);
+        border: var(--border);
     }
 
     p {
@@ -131,7 +132,6 @@ section.top {
 
     @media (width > 48rem) {
         padding-top: var(--size-sm);
-        max-width: 56.25em;
 
         h1 {
             margin-top: var(--size-sm);
@@ -141,6 +141,10 @@ section.top {
         p {
             line-height: 2.5rem;
             /* padding-top: var(--size-sm); */
+        }
+
+        img.height {
+            content: url("../assets/leden-groot.png");
         }
     }
 }
