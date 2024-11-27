@@ -1,10 +1,10 @@
 @font-face {
     font-family: "archivo";
-    src: url("/assets/Archivo-VariableFont_wdth,wght.ttf");
+    src: url("./assets/Archivo-VariableFont_wdth,wght.ttf");
 }
 @font-face {
     font-family: "martianmono";
-    src: url("/assets/MartianMono-VariableFont_wdth,wght.ttf");
+    src: url("./assets/MartianMono-VariableFont_wdth,wght.ttf");
 }
 
 /* CSS RESET */
@@ -452,7 +452,8 @@ section.bottom {
         ul {
             display: flex;
             gap: var(--size-sm);
-            align-items: flex-end;
+            align-items: center;
+            margin-top: var(--size-xs);
         }
         li {
             margin-top: 0;

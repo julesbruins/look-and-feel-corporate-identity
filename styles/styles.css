@@ -646,7 +646,8 @@ section.bottom {
         ul {
             display: flex;
             gap: var(--size-sm);
-            align-items: flex-end;
+            align-items: center;
+            margin-top: var(--size-xs);
         }
         li {
             margin-top: 0;
