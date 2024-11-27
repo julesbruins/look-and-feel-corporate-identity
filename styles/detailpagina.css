@@ -61,8 +61,8 @@ a.blauwe-link {
     span {
         padding: .75rem;
         border-right: var(--border);
-        font-weight: 500;
     }
+    
     div {
         height: 2.5rem;
         width: 2.5rem;
@@ -210,7 +210,7 @@ section.tabellen {
             content:"*";
         }
         label:has(:focus) span,
-        label:not( :has(:placeholder-shown) ) span {
+        label:not(:has(:placeholder-shown)) span {
             translate: 0 -1.2em;                        /* naar boven maar ook verplaatsen tekst  */
             color:var(--blue);
         }
