@@ -61,6 +61,7 @@ a.blauwe-link {
     span {
         padding: .75rem;
         border-right: var(--border);
+        font-weight: 500;
     }
     div {
         height: 2.5rem;
