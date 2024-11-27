@@ -167,7 +167,7 @@ section.info {
 section.tabellen {
     padding: var(--size-lg) var(--size-sm) 0;
     
-    h2 {
+    h3 {
         padding-bottom: var(--size-md);
         text-transform: uppercase;
     }
