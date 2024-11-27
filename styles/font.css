@@ -1,0 +1,8 @@
+@font-face {
+    font-family: "archivo";
+    src: url
+}
+@font-face {
+    font-family: "martianmono";
+    src: url("../fonts/MartianMono-VariableFont.woff2") format('woff2');
+}
