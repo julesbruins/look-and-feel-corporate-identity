@@ -353,6 +353,12 @@ section.locatie {
     a {
         hyphens: auto;
     }
+    .margin {
+        margin-top: var(--size-md);
+        display: flex;
+        flex-direction: column;
+        gap: var(--size-xs);
+    }
 }
 
 footer {
